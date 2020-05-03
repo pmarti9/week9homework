@@ -12,10 +12,14 @@ const questions = [
 {
     message: "what is the description of your repo?",
     name: "decsription",
-
 },
 //TOC
 //Install
+{
+    message:"What are the install instructions for your repo?",
+    name: "installation"
+},
+//Usage
 {
     message: "Please provide an example of the code's usage",
     name: "usage",
@@ -23,7 +27,7 @@ const questions = [
 //License
 {
     type: "list",
-    message: "What is the license of your repo",
+    message: "What is the license of your repo?",
     name: "license",
     choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
 },
@@ -42,13 +46,21 @@ const questions = [
    message: "What is your github username?",
    name: "userName", 
 },
+{
+    message: "What is your email address?",
+    name: "userEmail",
+},
 ];
-let filename = data.name.toLowerCase().splipt('').join('') + ".json";
-function writeToFile(fileName, data) {
-}
 
-function init() {
-    inquirer
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(fileName, data);
+};
+
+async function init() {
+    const data = await inquirer.prompt(questions);
+    console.log(data);
+
+    writeToFile("README.md", await generateMarkdown(data));
 
 }
 
