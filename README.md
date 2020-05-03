@@ -39,7 +39,7 @@
 
       ## Github Email
 
-      <parkerjmartin883@gmail.copm>
+      <parkerjmartin883@gmail.com>
 
 
   
