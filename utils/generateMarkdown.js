@@ -42,10 +42,10 @@ async function generateMarkdown(data) {
 
     * [Installation](#installation)
     * [Usage](#usage)
-    * License
-    * Contributing
-    * Tests
-    * Questions
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
     *   [Github Profile Picture](#githubprofile)
     *   [Email](#email)
 
@@ -55,13 +55,19 @@ async function generateMarkdown(data) {
 
     ## Usage
 
+    ${data.uage}
+
     ## License
 
       ${badgeChange(data.license)}
 
     ## Contributing
 
+    ${data.contributing}
+
     ## Tests
+
+    ${data.tests}
 
     ## Questions
       ${data.userName}
